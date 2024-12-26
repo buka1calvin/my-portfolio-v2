@@ -120,7 +120,7 @@ const HeroPage = () => {
               className="col-span-8 place-self-center md:mt-0 mt-10 text-center sm:text-left justify-self-start"
             >
               <h1 className="text-white font-semibold text-lg bg-secondary/15 w-fit px-2">
-                👋 Hello I'm
+                👋 Hello I&apos;m
               </h1>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -146,11 +146,15 @@ const HeroPage = () => {
               </h1>
               <TypeAnimation
                 sequence={[
-                  "Crafting Intuitive Interfaces",
+                  "Web Development",
                   1000,
-                  "Designing Engaging User Experiences",
+                  "UI/UX Design",
                   1000,
-                  "Transforming Ideas into Reality",
+                  "Building Scalable Systems",
+                  1000,
+                  "Real-Time Applications",
+                  1000,
+                  "Turning Ideas into Code",
                   1000,
                 ]}
                 wrapper="span"
@@ -159,14 +163,18 @@ const HeroPage = () => {
                 className="text-orange-200 text-2xl sm:text-3xl lg:text-4xl mb-6 font-semibold"
               />
               <p className="mb-4 mt-3 text-sm lg:leading-normal text-text_color">
-                I'm a passionate UI/UX Designer dedicated to creating seamless
-                and visually stunning digital experiences. With a keen eye for
-                detail and a user-centered approach, I transform complex ideas
-                into intuitive designs that leave a lasting impact.
+                I&apos;m a passionate Software Developer driven by a mission to
+                craft innovative solutions that inspire and empower users. From
+                building dynamic, responsive websites to architecting scalable
+                systems and designing intuitive user experiences, I thrive on
+                turning ideas into reality. Whether it&apos;s modern web
+                frameworks, real-time applications, or groundbreaking
+                technologies, I&apos;m here to create digital experiences that
+                leave a lasting impact.
               </p>
 
               <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 to-tertiary mb-4 text-lg sm:text-xl md:text-2xl font-bold">
-                Let's Build Something Amazing Together!
+                Let&apos;s Build Something Amazing Together!
               </h2>
               <div className="socials flex flex-row gap-2">
                 <Link href="https://github.com/yourusername" passHref>
@@ -183,8 +191,8 @@ const HeroPage = () => {
               <br />
               <br />
               <div className="flex md:gap-4">
-              <ButtonDownload title="Download CV"/>
-              <ButtonMore button="Learn More"/>
+                <ButtonDownload title="Download CV" />
+                <ButtonMore button="Learn More" />
               </div>
             </motion.div>
 

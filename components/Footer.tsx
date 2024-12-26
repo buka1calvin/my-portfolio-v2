@@ -12,7 +12,7 @@ const Footer = () => {
         >
           <Image src="/icons/logo.svg" alt="" width={200} height={350} />
         </Link>
-        <p className="text-tertiary">© 2024 Issa Mugabo. All Rights Reserved.</p>
+        <p className="text-tertiary">© 2024 Bukarani Calvin. All Rights Reserved.</p>
       </div>
     </footer>
   );

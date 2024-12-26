@@ -8,7 +8,7 @@ interface ProjectCardProps {
     gitUrl: string;
     previewUrl: string;
 }
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }:ProjectCardProps) => {
+const ProjectCard = ({ imgUrl, title, description, previewUrl }:ProjectCardProps) => {
   return (
     <div>
       <div

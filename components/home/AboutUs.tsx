@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaReact } from "react-icons/fa";
 const techStack = [
   {
     title: "GraphQL",
