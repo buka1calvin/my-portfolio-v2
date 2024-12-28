@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl  h-12 w-40 p-[1px] overflow-hidden",
+        "bg-transparent relative text-xl hidden md:block  h-12 w-40 p-[1px] overflow-hidden",
         containerClassName
       )}
       style={{
@@ -72,23 +72,21 @@ export function Button({
 export const MovingBorder = ({
   children,
   duration = 2000,
-  rx,
-  ry,
+  pathData = "M10 10 H 90 V 90 H 10 Z",
   ...otherProps
 }: {
   children: React.ReactNode;
   duration?: number;
-  rx?: string;
-  ry?: string;
+  pathData?: string;
   [key: string]: unknown;
 }) => {
-
   const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
-    if (length) {
+    const path = pathRef.current;
+    if (path && path.getTotalLength) {
+      const length = path.getTotalLength();
       const pxPerMillisecond = length / duration;
       progress.set((time * pxPerMillisecond) % length);
     }
@@ -115,12 +113,10 @@ export const MovingBorder = ({
         height="100%"
         {...otherProps}
       >
-        <rect
+        <path
           fill="none"
-          width="100%"
-          height="100%"
-          rx={rx}
-          ry={ry}
+          d={pathData}
+          stroke="none"
           ref={pathRef}
         />
       </svg>

@@ -12,7 +12,7 @@ import ButtonDownload from "../ui/ButtonDownload";
 const HeroPage = () => {
   return (
     <BackgroundBeamsWithCollision>
-      <section className="max-w-screen w-full mt-16 h-full relative flex items-center justify-center overflow-hidden md:px-20 px-4">
+      <section className="max-w-screen w-full md:mt-24 mt-0 h-full relative flex items-center justify-center overflow-hidden md:px-20 px-4">
         <div className=" flex items-center max-w-6xl w-full h-full">
           <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-r from-primary to-primary rounded-full blur-3xl opacity-70"></div>
           <div className="absolute bottom-0 right-0 w-60 h-60 bg-gradient-to-r from-primary to-primary rounded-full blur-3xl opacity-70"></div>
@@ -119,7 +119,7 @@ const HeroPage = () => {
               transition={{ duration: 0.5 }}
               className="col-span-8 place-self-center md:mt-0 mt-10 text-center sm:text-left justify-self-start"
             >
-              <h1 className="text-white font-semibold text-lg bg-secondary/15 w-fit px-2">
+              <h1 className="text-white md:text-start text-center font-semibold text-lg bg-secondary/15 w-fit px-2">
                 👋 Hello I&apos;m
               </h1>
               <motion.div
@@ -176,7 +176,7 @@ const HeroPage = () => {
               <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 to-tertiary mb-4 text-lg sm:text-xl md:text-2xl font-bold">
                 Let&apos;s Build Something Amazing Together!
               </h2>
-              <div className="socials flex flex-row gap-2">
+              <div className="socials flex flex-row md:justify-start justify-center gap-2">
                 <Link href="https://github.com/yourusername" passHref>
                   <FaGithub className="w-6 h-6 text-tertiary" />
                 </Link>
@@ -190,7 +190,7 @@ const HeroPage = () => {
               <br />
               <br />
               <br />
-              <div className="flex md:gap-4">
+              <div className="flex md:gap-4 gap-6 md:justify-start justify-center">
                 <ButtonDownload title="Download CV" />
                 <ButtonMore button="Learn More" />
               </div>

@@ -39,7 +39,7 @@ export const projectsData = [
     id: 5,
     title: "Igitego Hotel",
     description: "A hotel reservation website made using Next.js, Tailwind CSS, Node.js, and MongoDB.",
-    image: "/images/igitego hotel.png", // Replace with your image URL
+    image: "/images/igitego-hotel.png", // Replace with your image URL
     tag: ["All", "Web", "Hotel Reservation"],
     gitUrl: "/",
     previewUrl: "https://igitegohotel.com",

@@ -47,7 +47,7 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20">
+    <div className="md:block hidden max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
         <div>
           <div className="relative h-80 w-full">
@@ -86,10 +86,10 @@ export const AnimatedTestimonials = ({
                   <Image
                     src={testimonial.image}
                     alt={testimonial?.title}
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={300}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="h-full w-full bg-slate-400 rounded-md object-contain"
                   />
                 </motion.div>
               ))}
@@ -117,7 +117,7 @@ export const AnimatedTestimonials = ({
             }}
           >
             <h3 className="text-2xl font-bold text-tertiary">
-              {testimonials[active].title}
+              {testimonials[active]?.title}
             </h3>
             <Link href={testimonials[active].previewUrl} target="_blank" className="text-sm text-stone-500">
               {testimonials[active].previewUrl}

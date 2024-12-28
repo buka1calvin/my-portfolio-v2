@@ -70,3 +70,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+html{
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+
+  background-color: #292524;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #D09E72;
+}
