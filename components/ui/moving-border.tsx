@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function Button({
   borderRadius = "1.75rem",
@@ -54,7 +55,7 @@ export function Button({
         </MovingBorder>
       </div>
 
-      <div
+      <Link href="mailto:calvinbukarani@gmail.com"
         className={cn(
           "relative bg-primary/40 border border-slate-800 backdrop-blur-xl text-tertiary flex items-center justify-center w-full h-full text-sm antialiased dark:border-neutral-800",
           className
@@ -64,7 +65,7 @@ export function Button({
         }}
       >
         {children}
-      </div>
+      </Link>
     </Component>
   );
 }

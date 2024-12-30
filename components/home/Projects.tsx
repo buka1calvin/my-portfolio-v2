@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 // import ProjectTag from "../ui/ProjectTag";
 import { projectsData } from "@/constants/projects";
 // import { AnimatedTestimonials } from "../ui/animated-testimonials";
@@ -7,16 +7,16 @@ import { motion, useInView } from "framer-motion";
 import ProjectCard from "../ui/ProjectCard";
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  // const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   // const handleTagChange = (newTag:string) => {
   //   setTag(newTag);
   // };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  // const filteredProjects = projectsData.filter((project) =>
+  //   project.tag.includes(tag)
+  // );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
       </div> */}
         {/* <AnimatedTestimonials testimonials={filteredProjects}/> */}
         <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {projectsData.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
